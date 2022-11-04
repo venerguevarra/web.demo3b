@@ -56,10 +56,6 @@ public class ToyCatalogServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         out.println(stringBuilder.toString());
-
-        for (int index = 0; index < 100; index++) {
-            out.println("<input type='textbox' name='textbox'>");
-        }
         out.flush();
         out.close();
 

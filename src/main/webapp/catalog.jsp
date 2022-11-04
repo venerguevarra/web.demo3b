@@ -17,6 +17,17 @@ List<Toy> catalog = (List<Toy>) request.getAttribute("catalog");
     <body>
         <h2>Toy Catalog</h2>
         <hr/>
+        <%
+        if(catalog.isEmpty()) {
+        %>
+            <b>Empty Catalog!</b>
+        <%
+        }
+        %>
+        
+         <%
+        if(!catalog.isEmpty()) {
+        %>
         <table>
             <thead>
                 <tr>
@@ -41,5 +52,8 @@ List<Toy> catalog = (List<Toy>) request.getAttribute("catalog");
                 %>
             </tbody>
         </table>
+        <%
+        }
+        %>
     </body>
 </html>
